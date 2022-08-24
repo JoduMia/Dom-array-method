@@ -37,7 +37,19 @@ function billionaire() {
     updateDom(data);
 }
 
+//sort by richest
 
+function richest() {
+    data = data.sort((user1, user2) => {
+        return user2.wealth - user1.wealth;
+    })
+    console.log(data);
+    updateDom(data);
+}
+
+
+
+// main funcitons
 function appData(obj) {
     data.push(obj);
     updateDom(data);
