@@ -7,10 +7,36 @@ async function getRandomUser() {
     const userFname = data.results[0].name.first;
     const userLname = data.results[0].name.last;
 
-    const newUser = {name: `${userFname} ${userLname}`, wealth: Math.floor(Math.random() * 10000000)};
+    const newUser = {name: `${userFname} ${userLname}`, wealth: Math.floor(Math.random() * 100000)};
     appData(newUser);
 
 }
+
+
+function formatMoney(number) {
+    return number.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+}
+
+
+// double money functionality========
+function doubleMoney() {
+    data = data.map((user) => {
+        return {...user, wealth: user.wealth * 2}
+    })
+    updateDom(data);
+}
+
+//show only the billionaires
+
+function billionaire() {
+    console.log('click');
+    data = data.filter((user) => {
+        return user.wealth > 100000;
+    })
+    console.log(data);
+    updateDom(data);
+}
+
 
 function appData(obj) {
     data.push(obj);
@@ -30,19 +56,6 @@ function updateDom(providedData = data) {
         </div>`;
         parent.appendChild(child);
     })
-}
-
-function formatMoney(number) {
-    return number.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
-}
-
-
-// double money functionality========
-function doubleMoney() {
-    data = data.map((user) => {
-        return {...user, wealth: user.wealth * 2}
-    })
-    updateDom(data);
 }
 
 
