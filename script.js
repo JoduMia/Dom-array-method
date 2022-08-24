@@ -47,6 +47,16 @@ function richest() {
     updateDom(data);
 }
 
+// total wealth count function
+
+function total() {
+    const totalWealths = data.reduce((prev, curr) => {
+        return prev + curr.wealth;
+    },0);
+    const totalWealth = document.getElementById('totalwealth');
+    totalWealth.innerText = `$${formatMoney(totalWealths)} `;
+}
+
 
 
 // main funcitons
