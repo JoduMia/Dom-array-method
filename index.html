@@ -24,43 +24,29 @@
             <h1 class="text-center capitalize font-bold text-4xl italic">Dom array methods</h1>
             <div class="grid grid-cols-3">
                 <div class="p-4 border-r-2 border-sky-900 space-y-3">
-                    <button id="user" class="block bg-sky-900 shadow-lg w-full py-1 rounded-xl capitalize font-medium">add user</button>
+                    <button id="user" onclick="getRandomUser()" class="block bg-sky-900 shadow-lg w-full py-1 rounded-xl capitalize font-medium">add user</button>
                     <button id="double" class="block bg-sky-900 shadow-lg w-full py-1 rounded-xl capitalize font-medium">double money</button>
                     <button id="million" class="block bg-sky-900 shadow-lg w-full py-1 rounded-xl capitalize font-medium">show only millionaires</button>
                     <button id="rich" class="block bg-sky-900 shadow-lg w-full py-1 rounded-xl capitalize font-medium">sort by richest</button>
                     <button id="total" class="block bg-sky-900 shadow-lg w-full py-1 rounded-xl capitalize font-medium">calculate total</button>
                 </div>
                 <div class="col-span-2 p-4 space-y-3">
-                    <div class="flex justify-between border-b-2 border-sky-900 py-1 text-lg leading-none capitalize">
+                    <div class="flex justify-between border-b-2 border-sky-900 py-1 text-xl capitalize">
                         <h1 class="px-2">person</h1>
                         <h1 class="px-2">wealth</h1>
                     </div>
-                    <div>
-                        <div class="flex justify-between py-1 px-2 text-base  capitalize text-black">
-                            <p>person</p>
-                            <p>wealth</p>
-                        </div>
-                        <div class="flex justify-between py-1 px-2 text-base  capitalize text-black">
-                            <p>person</p>
-                            <p>wealth</p>
-                        </div>
-                        <div class="flex justify-between py-1 px-2 text-base  capitalize text-black">
-                            <p>person</p>
-                            <p>wealth</p>
-                        </div>
-                        <div class="flex justify-between py-1 px-2 text-base  capitalize text-black">
-                            <p>person</p>
-                            <p>wealth</p>
-                        </div>
+                    <div id="parent" class="space-y-2">
+
                     </div>
 
-                    <div id="totalshow" class="justify-between py-1 px-2 text-base  capitalize text-black hidden">
-                        <p>total</p>
-                        <p>amount</p>
+                    <div id="totalshow" class="justify-between py-1 px-2 text-base  capitalize text-black flex p-1 border-b-2 border-black bg-white rounded shadow">
+                        <p>total wealth:</p>
+                        <p class="font-bold" id="totalwealth">amount</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
