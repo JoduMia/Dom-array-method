@@ -37,6 +37,13 @@ function formatMoney(number) {
 }
 
 
+// double money functionality========
+function doubleMoney() {
+    data = data.map((user) => {
+        return {...user, wealth: user.wealth * 2}
+    })
+    updateDom(data);
+}
 
 
 
